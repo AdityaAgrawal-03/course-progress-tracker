@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nvm --version)",
+      "Read(//Users/aditya/.nvm/versions/node/**)",
+      "Bash(brew list *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(gh auth *)"
+    ]
+  }
+}
