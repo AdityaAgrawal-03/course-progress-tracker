@@ -113,11 +113,6 @@ npm run lint
 
 This project is configured for one-click deployment on **Vercel**:
 
-1. Push code to GitHub
-2. Import the repository on [vercel.com](https://vercel.com)
-3. Vercel auto-detects Vite — no configuration needed
-4. Live in ~30 seconds
-
 ## License
 
 MIT
