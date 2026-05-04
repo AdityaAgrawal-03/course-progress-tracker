@@ -1,5 +1,5 @@
 import { useProgressStore } from "../store/progressStore";
-import { lessonTypeConfig } from "../utils/progress";
+import { lessonTypeConfig } from "../config";
 import type { Lesson } from "../types";
 
 interface LessonItemProps {

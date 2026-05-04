@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useCourseProgress } from "../hooks/useProgress";
 import { ProgressBar } from "./ui/ProgressBar";
 import { Badge } from "./ui/Badge";
-import { difficultyConfig } from "../utils/progress";
+import { difficultyConfig } from "../config";
 import type { Course } from "../types";
 
 interface CourseCardProps {

@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { CourseCard } from "../components/CourseCard";
+import { PageHeader } from "../components/layout/PageHeader";
 import { courses } from "../data/curriculum";
 import { useProgressStore } from "../store/progressStore";
 
@@ -20,50 +21,47 @@ export function Dashboard() {
 
   return (
     <div className="min-h-screen bg-[#0c0c0c]">
-      {/* Header */}
-      <header className="border-b border-surface-border bg-surface/80 backdrop-blur-md sticky top-0 z-30">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-dim to-accent flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" viewBox="0 0 16 16" fill="none">
-                <path
-                  d="M2.5 8l4 4 7-8"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-            <span className="font-display font-bold text-lg tracking-tight">
-              CourseTrack
-            </span>
+      <PageHeader>
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-dim to-accent flex items-center justify-center">
+            <svg className="w-4 h-4 text-white" viewBox="0 0 16 16" fill="none">
+              <path
+                d="M2.5 8l4 4 7-8"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </div>
+          <span className="font-display font-bold text-lg tracking-tight">
+            CourseTrack
+          </span>
+        </div>
 
-          {/* Quick stats */}
-          <div className="hidden sm:flex items-center gap-6">
-            <div className="text-right">
-              <p className="text-[11px] uppercase tracking-widest text-muted">
-                Lessons Done
-              </p>
-              <p className="font-mono text-sm font-medium text-gray-200">
-                {stats.completedCount}
-                <span className="text-muted">/{stats.totalLessons}</span>
-              </p>
-            </div>
-            <div className="w-px h-8 bg-surface-border" />
-            <div className="text-right">
-              <p className="text-[11px] uppercase tracking-widest text-muted">
-                Courses Done
-              </p>
-              <p className="font-mono text-sm font-medium text-gray-200">
-                {stats.coursesCompleted}
-                <span className="text-muted">/{courses.length}</span>
-              </p>
-            </div>
+        {/* Quick stats */}
+        <div className="hidden sm:flex items-center gap-6">
+          <div className="text-right">
+            <p className="text-[11px] uppercase tracking-widest text-muted">
+              Lessons Done
+            </p>
+            <p className="font-mono text-sm font-medium text-gray-200">
+              {stats.completedCount}
+              <span className="text-muted">/{stats.totalLessons}</span>
+            </p>
+          </div>
+          <div className="w-px h-8 bg-surface-border" />
+          <div className="text-right">
+            <p className="text-[11px] uppercase tracking-widest text-muted">
+              Courses Done
+            </p>
+            <p className="font-mono text-sm font-medium text-gray-200">
+              {stats.coursesCompleted}
+              <span className="text-muted">/{courses.length}</span>
+            </p>
           </div>
         </div>
-      </header>
+      </PageHeader>
 
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-6 py-10">
